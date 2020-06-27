@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/shape_listitem"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/item_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:text="1"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/color_foreground_listitem"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_listitem_device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="serif-monospace"
+        android:text="192.168.1.42"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/color_foreground_listitem"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toEndOf="@+id/item_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_listitem_device_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="serif-monospace"
+        android:text="Alert device"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/color_foreground_listitem"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintEnd_toStartOf="@+id/imageview_listitem_registered"
+        app:layout_constraintStart_toEndOf="@+id/textview_listitem_device_address"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_listitem_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="serif-monospace"
+        android:text="a0fd538ce41b"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/color_foreground_listitem"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toEndOf="@+id/item_number"
+        app:layout_constraintTop_toBottomOf="@+id/textview_listitem_device_address" />
+
+    <ImageView
+        android:id="@+id/imageview_listitem_registered"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="registered"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_stars_black_24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

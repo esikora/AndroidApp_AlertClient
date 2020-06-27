@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="color_background_disabled">#D1E0E6</color>
+    <color name="color_foreground_disabled">#9DB5B2</color>
+    <color name="color_foreground_enabled">#0C8A7F</color>
+    <color name="color_background_enabled">#A6CBDC</color>
+    <color name="color_background_listitem">#92DFC6</color>
+    <color name="color_foreground_listitem">#39464C</color>
+    <color name="color_background_listitem_selected">#34F1B5</color>
+    <color name="color_foreground_active">#D83C0C</color>
+    <color name="color_background_active">#FF9D51</color>
+    <color name="color_text_state_ok">#0BAC31</color>
+    <color name="color_text_state_nok">@color/design_default_color_error</color>
+</resources>

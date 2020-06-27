@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DeviceScanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_alert_device_finder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_device_name_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_device"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_device_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Device name"
+                android:inputType="text"
+                android:maxLength="20"
+                android:textColor="@drawable/selector_button_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_add_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="6dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/selector_button_shape"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="Add"
+            android:textColor="@drawable/selector_button_text"
+            app:layout_constraintBottom_toBottomOf="@+id/input_device_name_label"
+            app:layout_constraintEnd_toStartOf="@+id/button_remove_device"
+            app:layout_constraintTop_toTopOf="@+id/input_device_name_label" />
+
+        <Button
+            android:id="@+id/button_remove_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="6dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/selector_button_shape"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="Remove"
+            android:textColor="@drawable/selector_button_text"
+            app:layout_constraintBottom_toBottomOf="@+id/button_add_device"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_add_device" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ToggleButton
+        android:id="@+id/button_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:background="@drawable/selector_button_shape"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@drawable/selector_button_text"
+        android:textOff="@string/label_scan_start"
+        android:textOn="@string/label_scan_running" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <fragment
+            android:id="@+id/fragment_scan_result"
+            android:name="de.sikora.androidapp_alertclient.DeviceListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_device"
+            tools:layout_editor_absoluteX="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

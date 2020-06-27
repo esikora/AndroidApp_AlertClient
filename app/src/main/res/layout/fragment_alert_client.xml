@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlertClientFragment">
+
+    <TextView
+        android:id="@+id/textview_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/label_device_name_na"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@drawable/selector_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_connection_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_connection_nok"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@drawable/selector_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_device_address" />
+
+    <TextView
+        android:id="@+id/textview_device_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_device_address_na"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@drawable/selector_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_device_name" />
+
+    <ToggleButton
+        android:id="@+id/togglebutton_alert"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/selector_button_shape"
+        android:textColor="@drawable/selector_button_text"
+        android:textOff="@string/label_alert_off"
+        android:textOn="@string/label_alert_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_connection_state" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
