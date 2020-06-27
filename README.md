@@ -4,7 +4,7 @@ The connection to the alert device is established via TCP over WiFi.
 
 ## Getting Started
 #### Development environment
-- Android Studio (version 1.46.1)
+- Android Studio 3.6.3
 
 #### System
 - Client device: Android smartphone
