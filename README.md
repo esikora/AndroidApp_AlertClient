@@ -8,7 +8,7 @@ The connection to the alert device is established via TCP over WiFi.
 
 #### System
 - Client device: Android smartphone
-- Alert device: see related project [ESP32 Alert Device](https://github.com/esikora/ESP32App_Alert_BLE/tree/WiFi)
+- Alert device: see related project [ESP32 Alert Device](https://github.com/esikora/ESP32App_Alert_BLE)
 
 ## Project Description
 
